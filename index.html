@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Name of yur theme -->
+  <title>Packer Skeleton</title>
+
+<!--
+  <palette class="palette-default" name="Default" preview="#ffffff,#222222">
+-->
+
+  <!-- Add any styles your theme requires here -->
+  <link rel="stylesheet/less" type="text/css" href="/styles/main.less">
+
+  <!-- This script loads the Populr theming engine. Populr will automatically
+       remove it at runtime. -->
+  <script src="http://populr.me/assets/developers/themer.js"></script>
+
+  <!-- Add any javscript your theme requires here -->
+  <script src="/js/main.js"></script>
+
+</head>
+<body>
+
+  <!-- Put your theme's inside this script tag. The script tag will
+       prevent issues with quote escaping and invalid markup. -->
+  <script id="theme" type="text/x-handlebars-template">
+
+    {{{title}}}
+
+    {{#region "packer" id="main-region" columns="3" column_width="270" gutter_width="35" dummy_content="T-1-l,T-1-m,T-1-s,I-1-l,I-2-l,I-1-m,I-2-m,I-1-s,I-2-s,V-1-l,V-2-l,V-1-m,V-2-m,V-1-s,V-2-s,D-3-l,D-3-m,D-3-s,E-1-l,E-2-l,E-1-m,E-2-m,E-1-s,E-2-s" max_auto_assets="0" sizes="s,m,l" default_size="s"}}
+
+      {{#asset "text" size="s"}}
+        {{{title}}}
+        {{{body}}}
+      {{/asset}}
+
+      {{#asset "text" size="m"}}
+        {{{title}}}
+        {{{body}}}
+      {{/asset}}
+
+      {{#asset "text" size="l"}}
+        {{{title}}}
+        {{{body}}}
+      {{/asset}}
+
+      {{#asset "imagegroup" size="s"}}
+        {{{title}}}
+        <div class="content">
+          {{{imageslider contents width="270" height="180"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "imagegroup" size="m"}}
+        {{{title}}}
+        <div class="content">
+          {{{imageslider contents width="575" height="383"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "imagegroup" size="l"}}
+        <div class="content">
+          {{{imageslider contents width="880" height="587"}}}
+        </div>
+        {{{title}}}
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "videogroup" size="s"}}
+        {{{title}}}
+        <div class="content">
+          {{{videoplayer contents width="270" height="202" resolution="small"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "videogroup" size="m"}}
+        {{{title}}}
+        <div class="content">
+          {{{videoplayer contents width="575" height="431" resolution="medium"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "videogroup" size="l"}}
+        <div class="content">
+          {{{videoplayer contents width="880" height="660" resolution="large"}}}
+        </div>
+        {{{title}}}
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "documentgroup" size="s"}}
+        {{{title}}}
+        <ul>
+          {{#documents}}
+            <li><a href="{{original_url}}">{{title}}</a></li>
+          {{/documents}}
+        </ul>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "documentgroup" size="m"}}
+        {{{title}}}
+        <ul>
+          {{#documents}}
+            <li><a href="{{original_url}}">{{title}}</a></li>
+          {{/documents}}
+        </ul>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "documentgroup" size="l"}}
+        {{{title}}}
+        <ul>
+          {{#documents}}
+            <li><a href="{{original_url}}">{{title}}</a></li>
+          {{/documents}}
+        </ul>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "embedgroup" size="s" width="270"}}
+        {{{title}}}
+        <div class="content">
+          {{#embeds}}
+            <div class="embed">{{{html}}}</div>
+          {{/embeds}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "embedgroup" size="m" width="575"}}
+        {{{title}}}
+        <div class="content">
+          {{#embeds}}
+            <div class="embed">{{{html}}}</div>
+          {{/embeds}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "embedgroup" size="l" width="880"}}
+        {{{title}}}
+        <div class="content">
+          {{#embeds}}
+            <div class="embed">{{{html}}}</div>
+          {{/embeds}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+
+    {{/region}}
+
+  </script>
+</body>
+</html>
